@@ -1,0 +1,16 @@
+<p>
+  Hey, For reward, here is a list of awesome computer scientists!
+</p>
+
+<p>
+  You want more? Add them yourself!
+</p>
+<form (submit)="addName(newname)">
+  <input #newname>
+  <button type="submit" class="btn btn-primary btn-sm" >Add</button>
+</form>
+<ul>
+  <li *ng-for="#name of list.get()">{{name}}</li>
+</ul>
+
+<button type="button" class="btn btn-primary btn-sm"> UN BOTON CON BOOSTRPA </button>
