@@ -2,6 +2,7 @@ import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
 import {NameList} from '../../services/name_list';
 
 import {BookSnipet1} from './booksnipet1';
+import {BookSnipet2} from './booksnipet2';
 
 @Component({
   selector: 'fplearning1',
@@ -19,5 +20,9 @@ export class FpLearning1Comp {
     let booksnipet:BookSnipet1 = new BookSnipet1();
     booksnipet.executeCode();
   }
-    
+  
+  executeCodeBookSnipet2() {
+    let booksnipet:BookSnipet2 = new BookSnipet2();
+    booksnipet.executeCode();
+  } 
 }
