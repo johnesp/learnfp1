@@ -24,6 +24,10 @@ module.exports = function(config) {
       'node_modules/traceur/bin/traceur.js',
       'node_modules/systemjs/dist/system.src.js',
       'node_modules/reflect-metadata/Reflect.js',
+      'node_modules/immutable/dist/immutable.js',
+      
+      // Library Files
+      'immutable.js',       
 
       { pattern: 'node_modules/angular2/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/@reactivex/rxjs/dist/**/*.js', included: false, watched: false },

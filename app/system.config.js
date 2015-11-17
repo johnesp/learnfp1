@@ -1,3 +1,6 @@
 System.config({
-  defaultJSExtensions: true
+  defaultJSExtensions: true,
+  paths: {
+    'immutable': 'node_modules/immutable/dist/immutable.js'
+  }
 });

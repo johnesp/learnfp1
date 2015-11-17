@@ -1,10 +1,5 @@
-/// <reference path='../../../node_modules/immutable/dist/immutable.d.ts' />
-
-import Immutable = require('immutable');
-
 import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
 import {NameList} from '../../services/name_list';
-import {List, Record, Map} from 'immutable';
 
 @Component({
   selector: 'fplearning1',
@@ -36,13 +31,15 @@ export class FpLearning1Comp {
     };    
     var michael = Map({name:'Michael', hp:20, team: 'green'});    
     punch(jobe, michael);
+    
+    
+    var map1: Immutable.Map<string, number>;
+    map1 = Immutable.Map({a:1, b:2, c:3});
     //=> Immutable.Map({name:"Michael", hp:19, team: "green"})
     */
     
     //var jobe = Immutable.Map({name:'Jobe', hp:20, team: 'red'});
     
-    var map1: Immutable.Map<string, number>;
-    map1 = Immutable.Map({a:1, b:2, c:3});
     
     console.log('FINISHED EXECUTING...!');
     }
