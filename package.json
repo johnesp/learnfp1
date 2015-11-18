@@ -82,6 +82,7 @@
     "es6-shim": "^0.33.6",
     "ng2-bootstrap": "^0.44.6",
     "systemjs": "^0.19.4",
-    "immutable": "^3.7.5"
+    "immutable": "^3.7.5",
+    "ramda":"^0.17.1"
   }
 }

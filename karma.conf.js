@@ -25,9 +25,11 @@ module.exports = function(config) {
       'node_modules/systemjs/dist/system.src.js',
       'node_modules/reflect-metadata/Reflect.js',
       'node_modules/immutable/dist/immutable.js',
+      'node_modules/ramda/dist/ramda.js',
       
       // Library Files
-      'immutable.js',       
+      'immutable.js',
+      'ramda.js',
 
       { pattern: 'node_modules/angular2/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/@reactivex/rxjs/dist/**/*.js', included: false, watched: false },

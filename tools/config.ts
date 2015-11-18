@@ -56,7 +56,8 @@ export const PATH = {
     jslib_copy_only: [
       resolve('systemjs/dist/system-polyfills.js'),
       resolve('systemjs/dist/system-polyfills.js.map'),
-      resolve('immutable/dist/immutable.js')
+      resolve('immutable/dist/immutable.js'),
+      resolve('ramda/dist/ramda.js')
     ],
     csslib: [
       resolve('bootstrap/dist/css/bootstrap.css'),
