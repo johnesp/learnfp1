@@ -48,6 +48,8 @@ export const PATH = {
       resolve('reflect-metadata/Reflect.js.map'),
       resolve('systemjs/dist/system.src.js'),
       resolve('immutable/dist/immutable.js'),
+      resolve('ramda/dist/ramda.js'),
+      resolve('jquery/dist/jquery.js'),
       `${APP_SRC}/system.config.js`,
       `${ANGULAR_BUNDLES}/angular2.dev.js`,
       `${ANGULAR_BUNDLES}/router.dev.js`,
@@ -57,7 +59,8 @@ export const PATH = {
       resolve('systemjs/dist/system-polyfills.js'),
       resolve('systemjs/dist/system-polyfills.js.map'),
       resolve('immutable/dist/immutable.js'),
-      resolve('ramda/dist/ramda.js')
+      resolve('ramda/dist/ramda.js'),
+      resolve('jquery/dist/jquery.js')
     ],
     csslib: [
       resolve('bootstrap/dist/css/bootstrap.css'),

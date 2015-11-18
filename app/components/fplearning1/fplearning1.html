@@ -4,7 +4,16 @@
 <p>
   Entry point for functional programming with javascript learning test code 
 </p>
-<p><br/><button type="button" (click)="executeCodeBookSnipet1()" class="btn btn-primary btn-sm"> Execute Snipet 1! </button></p>
-<p><br/><button type="button" (click)="executeCodeBookSnipet2()" class="btn btn-primary btn-sm"> Execute Snipet 2s! </button></p>
-  
+<!--p><br/><button type="button" (click)="executeCodeBookSnipet1()" class="btn btn-primary btn-sm"> Execute Snipet 1! </button></p-->
+<p>
+<form>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Defina el termino a buscar en Flicker</label>
+			<input  [(ng-model)]="searchTerm" type="text" class="form-control" id="exampleInputEmail1" placeholder="Termino a buscar">
+		</div>	
+		<button type="button" class='btn btn-success' (click)="searchInFlickr()">Buscar</button>    
+</form>
 
+<p><img *ng-for="#resultImage of resultImages" src="{{resultImage.src}}"/></p>
+
+</p>
