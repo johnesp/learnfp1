@@ -26,10 +26,12 @@ module.exports = function(config) {
       'node_modules/reflect-metadata/Reflect.js',
       'node_modules/immutable/dist/immutable.js',
       'node_modules/ramda/dist/ramda.js',
+      'node_modules/jquery/dist/jquery.js',
       
       // Library Files
       'immutable.js',
       'ramda.js',
+      'jquery.js',
 
       { pattern: 'node_modules/angular2/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/@reactivex/rxjs/dist/**/*.js', included: false, watched: false },

@@ -4,35 +4,32 @@
 import Immutable = require('immutable');
 import {List, Record, Map} from 'immutable';
 var R = require('ramda');
+var $ = require('jquery');
 
 export class BookSnipet2 {
   constructor() {
   }
 
   public executeCode() {
-    var defaultTo42 = R.defaultTo(42);
+    
+    /*var defaultTo42 = R.defaultTo(42);
     let result = defaultTo42(parseInt('21')); //=> 42
-    console.log(R.contains(3, [1, 2, 3])); //=> true);
-    
-    
-    //IMPURE THIS FIRST TWO???
-    var getJSON = R.curry(function(callback, url) {
-      getJSON(url, callback);//whats this?
-    });
-
-    var setHtml = R.curry(function(sel, html) {
-      (sel).html(html);//whats that about?
-    });
-    
-    var img = function (url) {
-      return ('<img />', { src: url });
-    };
+    console.log(R.contains(3, [1, 2, 3])); //=> true);*/
     
     var trace = R.curry(function(tag, x) {
       console.log(tag, x);
       return x;
     });
-    
+        
+    //IMPURE THIS FIRST TWO???
+    var getJSON = R.curry(function(callback, url) {
+      $.getJSON(url, callback);//whats this?
+    });
+
+    var setHtml = R.curry(function(sel, html) {
+      $(sel).html(html);//whats that about?
+    });
+                
     ////////////////////////////////////////////
 
     var url = function (t) {
@@ -40,6 +37,15 @@ export class BookSnipet2 {
         t + '&format=json&jsoncallback=?';
     };
     
+    var app = R.compose(getJSON(trace('response')), url);
+    app('cats');
+    
+    ///FULL!
+    
+    var img = function (url) {
+      return ('<img />', { src: url });
+    };
+    //var app = R.compose(getJSON(renderImages), url);
     var mediaUrl = R.compose(R.prop('m'), R.prop('media'));
 
     var srcs = R.compose(R.map(mediaUrl), R.prop('items'));
@@ -48,9 +54,7 @@ export class BookSnipet2 {
 
     var renderImages = R.compose(setHtml('body'), images);
 
-    var app = R.compose(getJSON(renderImages), url);
 
-    console.log(app('cats'));
 
   }
   
